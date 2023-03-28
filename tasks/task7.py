@@ -20,4 +20,20 @@ inputs = [
     ('xtkpx', 'xkctpx')  # -> c
 ]
 
+def find_char(first_string, second_string):
+    # print(list(zip(first_string, second_string)))
+    for first_char, second_char in zip(first_string, second_string):
+        # print(first_char, second_char)
+        if first_char != second_char:
+            return second_char
+    return second_string[-1]
+
 # тут ваше решение:
+for input in inputs:
+    first_string = list(input[0])
+    second_string = list(input[1])
+    first_string.sort()
+    second_string.sort()
+    # print(first_string)
+    # print(second_string)
+    print(find_char(first_string, second_string))

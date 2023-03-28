@@ -50,3 +50,4 @@ for input in inputs:
     temp_list = list(map(int, input[1].split()))
     print(random_calculation(n, temp_list))
 
+print('hello world')
